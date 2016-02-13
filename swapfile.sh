@@ -12,6 +12,6 @@ echo -n "swap" >> /etc/fstab
 echo -e -n "\t" >> /etc/fstab
 echo "discard,defaults" >> /etc/fstab
 echo -e -n "\t" >> /etc/fstab
-echo "0 0" >> /etc/fstab
+echo -n "0 0" >> /etc/fstab
 echo "vm.swappiness=0" >> /etc/sysctl.conf
 EOF
