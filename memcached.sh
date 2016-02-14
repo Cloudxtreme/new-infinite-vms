@@ -2,5 +2,5 @@
 yum install memcached libmemcached
 service memcached start
 chkconfig --levels 235 memcached on
-pecl install memcache
+/usr/local/bin/pecl install memcache
 service httpd restart
