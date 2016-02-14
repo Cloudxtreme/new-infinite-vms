@@ -4,4 +4,3 @@ umount -l /tmp
 umount -l /var/tmp
 rm -fv /usr/tmpDSK
 /scripts/securetmp
-EOF
