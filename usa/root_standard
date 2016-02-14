@@ -1,0 +1,33 @@
+; cPanel %cpversion%
+; Zone file for %domain%
+$TTL %ttl%
+@      %nsttl%	IN      SOA     %nameserver%. %rpemail%. (
+		%serial%	; serial, todays date+todays
+		43200		; refresh, seconds
+		7200		; retry, seconds
+		1209600		; expire, seconds
+		43200 )		; minimum, seconds
+
+%domain%. %nsttl% IN NS %nameserver%.
+%domain%. %nsttl% IN NS %nameserver2%.
+%domain%. %nsttl% IN NS %nameserver3%.
+%domain%. %nsttl% IN NS %nameserver4%.
+
+%nameserverentry%. IN A %nameservera%
+%nameserverentry2%. IN A %nameservera2%
+%nameserverentry3%. IN A %nameservera3%
+%nameserverentry4%. IN A %nameservera4%
+
+%domain%. 90 IN A 191.241.141.170
+
+%domain%. IN MX 1 ASPMX.L.GOOGLE.COM.
+%domain%. IN MX 5 ALT1.ASPMX.L.GOOGLE.COM.
+%domain%. IN MX 5 ALT2.ASPMX.L.GOOGLE.COM.
+%domain%. IN MX 10 ALT3.ASPMX.L.GOOGLE.COM.
+%domain%. IN MX 10 ALT4.ASPMX.L.GOOGLE.COM.
+%domain%. IN TXT "v=spf1 include:_spf.google.com ~all"
+_dmarc.%domain%. IN TXT "v=DMARC1; p=none;"
+
+www IN CNAME %domain%.
+sftp 90 IN A 191.241.141.170
+ssh 90 IN A 191.241.141.170
