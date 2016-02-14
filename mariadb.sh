@@ -12,6 +12,7 @@ yum install MariaDB-server MariaDB-client MariaDB-devel php-mysql
 /etc/init.d/mysql start
 mysql_upgrade
 /etc/init.d/mysql restart
+/scripts/easyapache --build
 yum install governor-mysql
 /usr/share/lve/dbgovernor/db-select-mysql --mysql-version=auto
 /usr/share/lve/dbgovernor/mysqlgovernor.py --install
