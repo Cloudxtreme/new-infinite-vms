@@ -9,9 +9,9 @@ mv /etc/my.cnf /etc/my.cnf-old
 mv /root/infinite-scripts/MariaDB.repo /etc/yum.repos.d/MariaDB.repo
 sed -i 's/mysql[*] nsd[*] php/nsd/g' /etc/yum.conf
 yum install MariaDB-server MariaDB-client MariaDB-devel php-mysql
-/etc/init.d/mysql start
+service mysql start
 mysql_upgrade
-/etc/init.d/mysql restart
+service mysql restart
 /scripts/easyapache --build
 yum install governor-mysql
 /usr/share/lve/dbgovernor/db-select-mysql --mysql-version=mariadb101
