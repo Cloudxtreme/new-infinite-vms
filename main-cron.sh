@@ -9,4 +9,3 @@ echo "*/2 * * * * /usr/local/sim/bin/sim -q >> /dev/null" | tee -a /var/spool/cr
 echo "* 0 * * * sh /root/infinite-scripts/whm-theme-changer.sh > /dev/null 2>&1" | tee -a /var/spool/cron/root
 echo "* 0 * * * sh /root/infinite-scripts/filemanager-theme-changer.sh > /dev/null 2>&1" | tee -a /var/spool/cron/root
 echo "0 4 * * * mysqlcheck -Aos -u root > /dev/null" | tee -a /var/spool/cron/root
-EOF
