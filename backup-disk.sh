@@ -2,3 +2,13 @@
 mkdir /backup-disk
 mkfs.ext4 -F /dev/sdb
 mount -o discard,defaults /dev/sdb /backup-disk
+echo -n "/swapfile" >> /etc/fstab
+echo -e -n "\t" >> /etc/fstab
+echo -n "swap" >> /etc/fstab
+echo -e -n "\t" >> /etc/fstab
+echo -n "swap" >> /etc/fstab
+echo -e -n "\t" >> /etc/fstab
+echo -n "discard,defaults" >> /etc/fstab
+echo -e -n "\t" >> /etc/fstab
+echo -n "0 0" >> /etc/fstab
+echo -e -n "\n" >> /etc/fstab
