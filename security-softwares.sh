@@ -26,3 +26,10 @@ wget ftp://ftp.pangeia.com.br/pub/seg/pac/chkrootkit.tar.gz
 tar -xvf chkrootkit.tar.gz
 cd chkrootkit-0.50
 make sense
+
+#sim
+cd ~
+wget http://www.rfxn.com/downloads/sim-current.tar.gz
+tar -xvf sim-current.tar.gz
+cd sim-3.0
+./setup -i
