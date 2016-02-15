@@ -11,3 +11,4 @@ echo "* 0 * * * sh /root/infinite-scripts/whm-theme-changer.sh > /dev/null 2>&1"
 echo "* 0 * * * sh /root/infinite-scripts/filemanager-theme-changer.sh > /dev/null 2>&1" | tee -a /var/spool/cron/root
 echo "* 0 * * * sh /root/infinite-scripts/phpMyAdmin-default-theme.sh > /dev/null 2>&1" | tee -a /var/spool/cron/root
 echo "0 4 * * * mysqlcheck -Aos -u root > /dev/null" | tee -a /var/spool/cron/root
+echo "30 0 * * 0 find /home/ -type f -name error_log -delete" | tee -a /var/spool/cron/root
