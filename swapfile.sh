@@ -10,7 +10,7 @@ echo -n "swap" >> /etc/fstab
 echo -e -n "\t" >> /etc/fstab
 echo -n "swap" >> /etc/fstab
 echo -e -n "\t" >> /etc/fstab
-echo "discard,defaults" >> /etc/fstab
+echo -n "discard,defaults" >> /etc/fstab
 echo -e -n "\t" >> /etc/fstab
 echo -n "0 0" >> /etc/fstab
 echo -e -n "\n" >> /etc/fstab
