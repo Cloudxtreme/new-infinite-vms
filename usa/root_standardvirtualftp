@@ -1,7 +1,7 @@
 ; cPanel %cpversion%
 ; Zone file for %domain%
 $TTL %ttl%
-@      %nsttl%	IN      SOA     %nameserver%. %rpemail%. (
+@      %nsttl%	IN      SOA     %nameserver%. abuse.infinite.sx. (
 		%serial%	; serial, todays date+todays
 		43200		; refresh, seconds
 		7200		; retry, seconds
@@ -31,3 +31,4 @@ _dmarc.%domain%. IN TXT "v=DMARC1; p=none;"
 www IN CNAME %domain%.
 sftp 90 IN A 191.241.141.170
 ssh 90 IN A 191.241.141.170
+cpanel 90 IN A 191.241.141.170
