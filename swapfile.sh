@@ -15,4 +15,3 @@ echo -e -n "\t" >> /etc/fstab
 echo -n "0 0" >> /etc/fstab
 echo -e -n "\n" >> /etc/fstab
 echo "vm.swappiness=0" >> /etc/sysctl.conf
-EOF
