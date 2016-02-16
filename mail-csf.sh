@@ -2,7 +2,7 @@
 sed -i 's/TESTING = "1"/TESTING = "0"/g' /etc/csf/csf.conf
 sed -i 's/RESTRICT_SYSLOG = "0"/RESTRICT_SYSLOG = "3"/g' /etc/csf/csf.conf
 sed -i 's/TCP_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995,2077,2078,2079,2080,2082,2083,2086,2087,2095,2096"/TCP_IN = "22,25,26,80,443,465,587,993,995,2083,2087,2095,2096,24441"/g' /etc/csf/csf.conf
-sed -i 's/TCP_OUT = "20,21,22,25,37,43,53,80,110,113,443,587,873,993,995,2086,2087,2089,2703"/TCP_OUT = "25,80,465,587,2073,2089,24441"/g' /etc/csf/csf.conf
+sed -i 's/TCP_OUT = "20,21,22,25,37,43,53,80,110,113,443,587,873,993,995,2086,2087,2089,2703"/TCP_OUT = "25,80,443,465,587,2073,2089,24441"/g' /etc/csf/csf.conf
 sed -i 's/UDP_IN = "20,21,53"/UDP_IN = "465,587,6277,24441"/g' /etc/csf/csf.conf
 sed -i 's/UDP_OUT = "20,21,53,113,123,873,6277,24441"/UDP_OUT = "465,587,783,6277,24441"/g' /etc/csf/csf.conf
 sed -i 's/IPV6_SPI = "1"/IPV6_SPI = "0"/g' /etc/csf/csf.conf
