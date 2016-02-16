@@ -16,4 +16,3 @@ service portreserve stop
 chkconfig portreserve off
 service rpcbind stop
 chkconfig rpcbind off
-EOF
