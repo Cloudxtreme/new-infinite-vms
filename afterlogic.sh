@@ -1,5 +1,6 @@
 #! /bin/bash
 cd ~
+wget http://www.afterlogic.org/download/webmail-panel-installer.tar.gz
 tar -xzvf ./webmail-panel-installer.tar.gz
 cd ./webmail-panel-installer
 chmod a+x ./installer
