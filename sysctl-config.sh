@@ -16,3 +16,7 @@ service portreserve stop
 chkconfig portreserve off
 service rpcbind stop
 chkconfig rpcbind off
+service saslauthd stop
+chkconfig saslauthd off
+service xinetd stop
+chkconfig xinetd off
