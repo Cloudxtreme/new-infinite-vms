@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 sed -i 's/TESTING = "1"/TESTING = "0"/g' /etc/csf/csf.conf
 sed -i 's/RESTRICT_SYSLOG = "0"/RESTRICT_SYSLOG = "3"/g' /etc/csf/csf.conf
 sed -i 's/TCP_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995,2077,2078,2079,2080,2082,2083,2086,2087,2095,2096"/TCP_IN = "80,443,2221,2222"/g' /etc/csf/csf.conf
