@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 echo "kernel.panic=10" >> /etc/sysctl.conf
 echo "kernel.user_ptrace=0" >> /etc/sysctl.conf
 echo "net.ipv4.conf.all.accept_source_route=0" >> /etc/sysctl.conf
