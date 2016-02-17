@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 $DIRECTORY=/usr/local/cpanel/base/3rdparty/phpMyAdmin/themes/infinite
 if [ ! -d "$DIRECTORY" ]; then
 cp -u /root/infinite-scripts/infinite-phpmyadmin.tar.gz /usr/local/cpanel/base/3rdparty/phpMyAdmin/themes/infinite-phpmyadmin.tar.gz
