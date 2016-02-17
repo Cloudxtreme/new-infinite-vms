@@ -1,4 +1,5 @@
-#! /bin/bash
+#!/bin/bash
+
 #maldet
 cd /usr/local/src/
 wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
