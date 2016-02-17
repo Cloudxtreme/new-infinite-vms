@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 mv /root/infinite-scripts/global_header.tar.gz /usr/local/cpanel/base/frontend/paper_lantern/global_header.tar.gz
 tar -zvxf /usr/local/cpanel/base/frontend/paper_lantern/global_header.tar.gz -C /usr/local/cpanel/base/frontend/paper_lantern/
 rm -f /usr/local/cpanel/base/frontend/paper_lantern/global_header.tar.gz
