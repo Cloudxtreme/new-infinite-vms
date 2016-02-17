@@ -24,7 +24,7 @@ sed -i 's/LF_POP3D = "10"/LF_POP3D = "20"/g' /etc/csf/csf.conf
 sed -i 's/LF_POP3D_PERM = "1"/LF_POP3D_PERM = "900"/g' /etc/csf/csf.conf
 sed -i 's/LF_IMAPD = "10"/LF_IMAPD = "20"/g' /etc/csf/csf.conf
 sed -i 's/LF_IMAPD_PERM = "1"/LF_IMAPD_PERM = "900"/g' /etc/csf/csf.conf
-sed -i 's/LF_CPANEL = "5"/LF_CPANEL = "10"/g' /etc/csf/csf.conf
+sed -i 's/LF_CPANEL = "5"/LF_CPANEL = "0"/g' /etc/csf/csf.conf
 sed -i 's/LF_CPANEL_PERM = "1"/LF_CPANEL_PERM = "900"/g' /etc/csf/csf.conf
 sed -i 's/LF_SSH_EMAIL_ALERT = "1"/LF_SSH_EMAIL_ALERT = "0"/g' /etc/csf/csf.conf
 sed -i 's/LF_CONSOLE_EMAIL_ALERT = "1"/LF_CONSOLE_EMAIL_ALERT = "0"/g' /etc/csf/csf.conf
