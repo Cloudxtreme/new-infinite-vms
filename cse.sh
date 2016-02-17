@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 cd /usr/src
 rm -fv /usr/src/cse.tgz
 wget https://download.configserver.com/cse.tgz
