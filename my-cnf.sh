@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 sed -i '1 i[client]\' /etc/my.cnf
 sed -i '2 idefault-character-set=utf8mb4' /etc/my.cnf
 sed -i '3 i# End of mysql client configs' /etc/my.cnf
