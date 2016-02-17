@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 echo "00 22 * * * /usr/local/maldetect/maldet -d" | tee -a /var/spool/cron/root
 echo "10 22 * * * /usr/local/maldetect/maldet -u" | tee -a /var/spool/cron/root
 echo "50 22 * * 0 /usr/local/maldetect/maldet -b -r /home?/?/mail" | tee -a /var/spool/cron/root
