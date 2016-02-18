@@ -8,14 +8,9 @@ main_return="return 503; #main"
 cp_return="return 503; #cp"
 
 if [ "$curl_check" != "$curl_result" ]; then
-sed -r -i -e "s|$main_proxy_pass|$main_return|g" $nginx_conf; && service nginx reload
-sed -r -i -e "s|$cp_proxy_pass|$cp_return|g" $nginx_conf;
+grep "$main_proxy_pass" $nginx_conf && sed -r -i -e "s|$main_proxy_pass|$main_return|g" $nginx_conf && service nginx restart
+grep "$cp_proxy_pass" $nginx_conf && sed -r -i -e "s|$cp_proxy_pass|$cp_return|g" $nginx_conf && service nginx restart
 else
-sed -r -i -e "s|$main_return|$main_proxy_pass|g" $nginx_conf;
-sed -r -i -e "s|$cp_return|$cp_proxy_pass|g" $nginx_conf;
+grep "$main_return" $nginx_conf && sed -r -i -e "s|$main_return|$main_proxy_pass|g" $nginx_conf && service nginx restart
+grep "$cp_return" $nginx_conf && sed -r -i -e "s|$cp_return|$cp_proxy_pass|g" $nginx_conf && service nginx restart
 fi
-
-while inotifywait -q -e modify $nginx_conf >/dev/null; do
-    service nginx stop
-    service nginx start
-done
