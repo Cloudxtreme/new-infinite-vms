@@ -13,5 +13,5 @@ echo "* 0 * * * sh /root/infinite-scripts/phpMyAdmin-default-theme.sh > /dev/nul
 echo "0 4 * * * mysqlcheck -Aos -u root > /dev/null" | tee -a /var/spool/cron/root
 echo "30 0 * * 0 find /home/ -type f -name error_log -delete" | tee -a /var/spool/cron/root
 echo "0 20 1,15 * * yum clean all" | tee -a /var/spool/cron/root
-echo "0 0 1,15 * * reboot" | tee -a /var/spool/cron/root
+echo "0 2 1,15 * * reboot" | tee -a /var/spool/cron/root
 echo "* 0,6,12,18 * * * sync; echo 3 > /proc/sys/vm/drop_caches" | tee -a /var/spool/cron/root
