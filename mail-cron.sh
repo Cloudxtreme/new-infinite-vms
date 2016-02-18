@@ -14,4 +14,4 @@ echo "0 * * * * sh /root/infinite-scripts/alcron.sh" | tee -a /var/spool/cron/ro
 echo "*/30 * * * * sh /root/infinite-scripts/eximrandomips.sh" | tee -a /var/spool/cron/root
 echo "*/30 * * * * sh /root/infinite-scripts/eximrandomhelo.sh" | tee -a /var/spool/cron/root
 echo "0 20 1,15 * * yum clean all" | tee -a /var/spool/cron/root
-echo "0 0 1,15 * * reboot" | tee -a /var/spool/cron/root
+echo "0 1 1,15 * * reboot" | tee -a /var/spool/cron/root
