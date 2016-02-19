@@ -6,7 +6,7 @@ dns_files=/var/named/*.db
 
 #proxys ips
 main_one_google="191.241.141.170"
-backup_one_google=""
+backup_one_google="209.141.39.237"
 main_one_amazon=""
 backup_one_google=""
 main_one_uol=""
