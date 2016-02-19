@@ -8,4 +8,9 @@ echo "Directive = max_input_vars" | tee -a /etc/cl.selector/php.conf
 echo "Default   = 1000" | tee -a /etc/cl.selector/php.conf
 echo "Type      = list" | tee -a /etc/cl.selector/php.conf
 echo "Range     = 1000,2000,4000,8000" | tee -a /etc/cl.selector/php.conf
-echo "Comment   = How many input variables may be accepted (limit is applied to $_GET, $_POST and $_COOKIE superglobal separately). Use of this directive mitigates the possibility of denial of service attacks which use hash collisions." | tee -a /etc/cl.selector/php.conf
+echo "Comment   = How many input variables may be accepted (limit is applied to GET, POST and COOKIE superglobal separately). Use of this directive mitigates the possibility of denial of service attacks which use hash collisions." | tee -a /etc/cl.selector/php.conf
+echo -e "\n" | tee -a /etc/cl.selector/php.conf
+echo "Directive = expose_php" | tee -a /etc/cl.selector/php.conf
+echo "Default   = Off" | tee -a /etc/cl.selector/php.conf
+echo "Type      = bool" | tee -a /etc/cl.selector/php.conf
+echo "Comment     = Prevents the webserver from sending back the X-Powered-By header." | tee -a /etc/cl.selector/php.conf
