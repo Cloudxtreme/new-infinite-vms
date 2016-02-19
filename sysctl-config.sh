@@ -2,16 +2,11 @@
 echo "kernel.panic = 10" >> /etc/sysctl.conf
 echo "net.ipv4.conf.all.accept_source_route = 0" >> /etc/sysctl.conf
 echo "net.ipv4.icmp_echo_ignore_broadcasts = 1" >> /etc/sysctl.conf
-echo "kernel.sysrq = 0" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_sack = 0" >> /etc/sysctl.conf
-echo "net.ipv4.ip_forward= 0" >> /etc/sysctl.conf
 echo "net.ipv4.conf.all.accept_redirects= 0" >> /etc/sysctl.conf
 echo "net.ipv4.conf.all.secure_redirects= 0" >> /etc/sysctl.conf
-echo "net.ipv4.tcp_syncookies= 1" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_synack_retries = 2" >> /etc/sysctl.conf
 echo "net.ipv4.conf.all.rp_filter= 1" >> /etc/sysctl.conf
-echo "net.ipv4.conf.default.rp_filter= 1" >> /etc/sysctl.conf
-echo "net.ipv4.conf.default.accept_source_route= 0" >> /etc/sysctl.conf
 echo "net.ipv4.conf.all.send_redirects= 0" >> /etc/sysctl.conf
 echo "net.ipv4.conf.default.send_redirects= 0" >> /etc/sysctl.conf
 echo "net.ipv4.conf.default.accept_redirects= 0" >> /etc/sysctl.conf
