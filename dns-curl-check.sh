@@ -25,8 +25,8 @@ curl_result=200
 #vms - start
 #one-google
 if [ "$curl_check_one_google" != "$curl_result" ]; then
-grep "$main_one_google" $dns_files && sed -r -i -e "s|$main_one_google|$backup_one_google|g" $dns_files
+grep "$main_one_google" $dns_files && sed -r -i -e "s|$main_one_google|$backup_one_google|g" $dns_files && service bind reload
 else
-grep "$backup_one_google" $dns_files && sed -r -i -e "s|$backup_one_google|$main_one_google|g" $dns_files
+grep "$backup_one_google" $dns_files && sed -r -i -e "s|$backup_one_google|$main_one_google|g" $dns_files && service bind reload
 fi
 #vms - end
