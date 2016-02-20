@@ -1,17 +1,17 @@
 #!/bin/bash
 sed -i 's/TESTING = "1"/TESTING = "0"/g' /etc/csf/csf.conf
 sed -i 's/RESTRICT_SYSLOG = "0"/RESTRICT_SYSLOG = "3"/g' /etc/csf/csf.conf
-sed -i 's/TCP_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995,2077,2078,2079,2080,2082,2083,2086,2087,2095,2096"/TCP_IN = "80,443,2221,2222"/g' /etc/csf/csf.conf
-sed -i 's/TCP_OUT = "20,21,22,25,37,43,53,80,110,113,443,587,873,993,995,2086,2087,2089,2703"/TCP_OUT = "80,443"/g' /etc/csf/csf.conf
+sed -i 's/TCP_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995,2221"/TCP_IN = "80,443,2221,2222"/g' /etc/csf/csf.conf
+sed -i 's/TCP_OUT = "20,21,22,25,37,53,80,110,113,443,587,993,995"/TCP_OUT = "37,80,443"/g' /etc/csf/csf.conf
 sed -i 's/UDP_IN = "20,21,53"/UDP_IN = ""/g' /etc/csf/csf.conf
-sed -i 's/UDP_OUT = "20,21,53,113,123,873,6277,24441"/UDP_OUT = ""/g' /etc/csf/csf.conf
+sed -i 's/UDP_OUT = "20,21,53,113,123"/UDP_OUT = ""/g' /etc/csf/csf.conf
 sed -i 's/ICMP_IN = "1"/ICMP_IN = "0"/g' /etc/csf/csf.conf
 sed -i 's/IPV6 = "0"/IPV6 = "1"/g' /etc/csf/csf.conf
 sed -i 's/IPV6_ICMP_STRICT = "0"/IPV6_ICMP_STRICT = "1"/g' /etc/csf/csf.conf
-sed -i 's/TCP6_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995,2077,2078,2082,2083,2086,2087,2095,2096"/TCP6_IN = ""/g' /etc/csf/csf.conf
-sed -i 's/TCP6_OUT = "20,21,22,25,37,43,53,80,110,113,443,587,873,993,995,2086,2087,2089,2703"/TCP6_OUT = ""/g' /etc/csf/csf.conf
+sed -i 's/TCP6_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995,2221"/TCP6_IN = ""/g' /etc/csf/csf.conf
+sed -i 's/TCP6_OUT = "20,21,22,25,53,80,110,113,443,587,993,995"/TCP6_OUT = ""/g' /etc/csf/csf.conf
 sed -i 's/UDP6_IN = "20,21,53"/UDP6_IN = ""/g' /etc/csf/csf.conf
-sed -i 's/UDP6_OUT = "20,21,53,113,123,873,6277,24441"/UDP6_OUT = ""/g' /etc/csf/csf.conf
+sed -i 's/UDP6_OUT = "20,21,53,113,123"/UDP6_OUT = ""/g' /etc/csf/csf.conf
 sed -i 's/SYSLOG_CHECK = "0"/SYSLOG_CHECK = "3600"/g' /etc/csf/csf.conf
 sed -i 's/IGNORE_ALLOW = "0"/IGNORE_ALLOW = "1"/g' /etc/csf/csf.conf
 sed -i 's/LF_NETBLOCK_ALERT = "1"/LF_NETBLOCK_ALERT = "0"/g' /etc/csf/csf.conf
