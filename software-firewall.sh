@@ -6,4 +6,4 @@ tar -xzf csf.tgz
 cd csf
 sh install.sh
 perl /usr/local/csf/bin/csftest.pl
-yum install perl-GDGraph bind-utils unzip perl-libwww-perl
+yum -y install perl-GDGraph bind-utils unzip perl-libwww-perl
