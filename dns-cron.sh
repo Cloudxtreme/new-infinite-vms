@@ -9,3 +9,4 @@ echo "30 22 */3 * * /usr/local/maldetect/maldet -a" | sudo tee -a /var/spool/cro
 echo "00 23 1,15 * * (cd /root/chkrootkit-0.50; ./chkrootkit 2>&1)" | tee -a /var/spool/cron/root
 echo "*/1 * * * * sh /root/infinite-scripts/dns-curl-check.sh >> /dev/null" | tee -a /var/spool/cron/root
 echo "30 2 1,15 * * yum clean all" | tee -a /var/spool/cron/root
+echo "30 0 * * * rm -f /var/named/sed* >> /dev/null" | tee -a /var/spool/cron/root
