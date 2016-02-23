@@ -15,10 +15,10 @@ main_one_equinix="191.241.141.173"
 backup_one_equinix=""
 
 #curls
-curl_check_one_google=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_google/ -m 30)
-curl_check_one_amazon=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_amazon/ -m 30)
-curl_check_one_uol=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_uol/ -m 30)
-curl_check_one_equinix=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_equinix/ -m 30)
+curl_check_one_google=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_google/ -m 20)
+curl_check_one_amazon=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_amazon/ -m 20)
+curl_check_one_uol=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_uol/ -m 20)
+curl_check_one_equinix=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_equinix/ -m 20)
 curl_result=200
 #variables - end
 
