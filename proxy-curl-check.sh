@@ -1,6 +1,6 @@
 #!/bin/bash
 nginx_conf=/etc/nginx/nginx.conf
-curl_check=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://ip-cloud/ -m 30)
+curl_check=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://ip-cloud/ -m 20)
 curl_result=200
 main_proxy_pass="proxy_pass http://ip-cloud;"
 cp_proxy_pass="proxy_pass http://cpanel-webserver;"
