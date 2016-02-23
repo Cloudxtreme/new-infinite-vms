@@ -6,12 +6,12 @@ dns_files=/var/named/*.db
 
 #proxys ips
 main_one_google="191.241.141.170"
-backup_one_google="209.141.39.237"
-main_one_amazon=""
-backup_one_google=""
-main_one_uol=""
+backup_one_google="198.251.86.35"
+main_one_amazon="191.241.141.171"
+backup_one_amazon="198.251.86.36"
+main_one_uol="191.241.141.172"
 backup_one_uol=""
-main_one_equinix=""
+main_one_equinix="191.241.141.173"
 backup_one_equinix=""
 
 #curls
