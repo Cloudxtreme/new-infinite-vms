@@ -22,6 +22,7 @@ $TTL %ttl%
 
 %domain%. IN MX 1 mx.one.emailserver8.com.
 %domain%. IN MX 5 mx2.one.emailserver8.com.
+%domain%. IN MX 10 mx3.one.emailserver8.com.
 %domain%. IN TXT "v=spf1 include:_spf.one.emailserver8.com ~all"
 _dmarc.%domain%. IN TXT "v=DMARC1; p=none;"
 
