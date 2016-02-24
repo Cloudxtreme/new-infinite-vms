@@ -3,10 +3,10 @@
 $TTL %ttl%
 @      %nsttl%	IN      SOA     %nameserver%. abuse.infinite.sx. (
 		%serial%	; serial, todays date+todays
-		43200		; refresh, seconds
-		7200		; retry, seconds
+		7200		; refresh, seconds
+		900		; retry, seconds
 		1209600		; expire, seconds
-		43200 )		; minimum, seconds
+		86400 )		; minimum, seconds
 
 %domain%. %nsttl% IN NS %nameserver%.
 %domain%. %nsttl% IN NS %nameserver2%.
