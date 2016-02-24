@@ -3,10 +3,10 @@
 $TTL %ttl%
 @      %nsttl%	IN      SOA     %nameserver%. abuse.infinite.sx. (
 		%serial%	; serial, todays date+todays
-		43200		; refresh, seconds
-		7200		; retry, seconds
+		7200		; refresh, seconds
+		900		; retry, seconds
 		1209600		; expire, seconds
-		43200 )		; minimum, seconds
+		86400 )		; minimum, seconds
 
 %domain%. %nsttl% IN NS %nameserver%.
 %domain%. %nsttl% IN NS %nameserver2%.
@@ -27,6 +27,10 @@ $TTL %ttl%
 _dmarc.%domain%. 86400 IN TXT "v=DMARC1; p=none;"
 
 www IN CNAME %domain%.
+smtp IN CNAME mx.one.emailserver8.com
+imap IN CNAME mx.one.emailserver8.com
+pop IN CNAME mx.one.emailserver8.com
+
 sftp 90 IN A 191.241.141.170
 ssh 90 IN A 191.241.141.170
 cpanel 90 IN A 191.241.141.170
