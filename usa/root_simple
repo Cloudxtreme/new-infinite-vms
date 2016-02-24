@@ -34,14 +34,14 @@ cpanel 90 IN A 191.241.141.170
 webmail 90 IN A 191.241.141.170
 cpanel.webmail 90 IN A 191.241.141.170
 
-autoconfig IN A 104.206.223.171
-autodiscover IN A 104.206.223.171
-_autodiscover._tcp IN SRV 0 0 443 cpanelemaildiscovery.cpanel.net.
-_caldav._tcp IN SRV 0 0 2079 one.emailserver8.com.
-_caldavs._tcp IN SRV 0 0 2080 one.emailserver8.com.
-_carddav._tcp IN SRV 0 0 2079 one.emailserver8.com.
-_carddavs._tcp IN SRV 0 0 2080 one.emailserver8.com.
-_caldav._tcp IN TXT path=/
-_caldavs._tcp IN TXT path=/
-_carddav._tcp IN TXT path=/
-_carddavs._tcp IN TXT path=/
+autoconfig 86400 IN A 104.206.223.171
+autodiscover 86400 IN A 104.206.223.171
+_autodiscover._tcp 86400 IN SRV 0 0 443 cpanelemaildiscovery.cpanel.net.
+_caldav._tcp 86400 IN SRV 0 0 2079 one.emailserver8.com.
+_caldavs._tcp 86400 IN SRV 0 0 2080 one.emailserver8.com.
+_carddav._tcp 86400 IN SRV 0 0 2079 one.emailserver8.com.
+_carddavs._tcp 86400 IN SRV 0 0 2080 one.emailserver8.com.
+_caldav._tcp 86400 IN TXT path=/
+_caldavs._tcp 86400 IN TXT path=/
+_carddav._tcp 86400 IN TXT path=/
+_carddavs._tcp 86400 IN TXT path=/
