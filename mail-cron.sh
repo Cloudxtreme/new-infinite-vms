@@ -9,8 +9,8 @@ echo "*/2 * * * * /usr/local/sim/bin/sim -q >> /dev/null" | tee -a /var/spool/cr
 echo "6 0 * * * sh /root/infinite-scripts/whm-theme-changer.sh > /dev/null 2>&1" | tee -a /var/spool/cron/root
 echo "5 0 * * * sh /root/infinite-scripts/filemanager-theme-changer.sh > /dev/null 2>&1" | tee -a /var/spool/cron/root
 echo "0 4 * * * mysqlcheck -Aos -u root >> /dev/null" | tee -a /var/spool/cron/root
-echo "0 * * * * sh /root/infinite-scripts/alcron.sh" | tee -a /var/spool/cron/root
-echo "*/30 * * * * sh /root/infinite-scripts/eximrandomips.sh" | tee -a /var/spool/cron/root
-echo "*/30 * * * * sh /root/infinite-scripts/eximrandomhelo.sh" | tee -a /var/spool/cron/root
+echo "0 * * * * sh /root/infinite-scripts/alcron.sh  >> /dev/null" | tee -a /var/spool/cron/root
+echo "*/30 * * * * sh /root/infinite-scripts/eximrandomips.sh  >> /dev/null" | tee -a /var/spool/cron/root
+echo "*/30 * * * * sh /root/infinite-scripts/eximrandomhelo.sh  >> /dev/null" | tee -a /var/spool/cron/root
 echo "30 0 1,15 * * yum clean all" | tee -a /var/spool/cron/root
 echo "0 4 1,15 * * reboot" | tee -a /var/spool/cron/root
