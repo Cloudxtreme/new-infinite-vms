@@ -32,6 +32,7 @@ sftp 90 IN A 191.241.141.170
 ssh 90 IN A 191.241.141.170
 cpanel 90 IN A 191.241.141.170
 webmail 90 IN A 191.241.141.170
+webmail.webmail 90 IN A 191.241.141.170
 cpanel.webmail 90 IN A 191.241.141.170
 
 autoconfig 86400 IN A 104.206.223.171
