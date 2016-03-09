@@ -5,3 +5,4 @@ yum update cagefs lvemanager
 cagefsctl --init
 cagefsctl --enable-all
 cagefsctl --disable northontorga
+cagefsctl --disable ntorga
