@@ -1,7 +1,7 @@
 #!/bin/bash
 nginx_conf=/etc/nginx/nginx.conf
 nginx_ssl_conf=/etc/nginx/sites-enabled/ssls.conf
-curl_check=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://ip-cloud/ -m 20)
+curl_check=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://ip-cloud/cgi-sys/defaultwebpage.cgi -m 20)
 curl_result=200
 main_proxy_pass="proxy_pass http://ip-cloud;"
 main_ssl_proxy_pass="proxy_pass https://ip-cloud;"
