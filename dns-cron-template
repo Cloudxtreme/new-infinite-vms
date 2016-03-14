@@ -1,0 +1,15 @@
+0 6 * * * /usr/local/cpanel/scripts/exim_tidydb > /dev/null 2>&1
+30 5 * * * /usr/local/cpanel/scripts/optimize_eximstats > /dev/null 2>&1
+2,58 * * * * /usr/local/bandmin/bandmin
+0 0 * * * /usr/local/bandmin/ipaddrmap
+45 23 * * * /usr/local/cpanel/scripts/upcp --cron
+35 * * * * /usr/bin/test -x /usr/local/cpanel/bin/tail-check && /usr/local/cpanel/bin/tail-check
+3,18,33,48 * * * * /usr/local/cpanel/whostmgr/bin/dnsqueue > /dev/null 2>&1
+00 22 */3 * * /usr/local/maldetect/maldet -d > /dev/null 2>&1
+10 22 */3 * * /usr/local/maldetect/maldet -u > /dev/null 2>&1
+30 22 */3 * * /usr/local/maldetect/maldet -a > /dev/null 2>&1
+00 23 1,15 * * (cd /root/chkrootkit-0.50; ./chkrootkit 2>&1)
+*/1 * * * * sh /root/infinite-scripts/dns-curl-check.sh > /dev/null 2>&1
+48 0 * * * /usr/local/cpanel/3rdparty/bin/freshclam --quiet --no-warnings > /dev/null 2>&1
+30 0 * * * rm -f /var/named/sed* > /dev/null 2>&1
+30 2 1,15 * * yum clean all > /dev/null 2>&1
