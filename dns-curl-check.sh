@@ -9,10 +9,10 @@ main_one_google="191.241.141.170"
 backup_one_google="198.251.86.35"
 main_one_amazon="191.241.141.171"
 backup_one_amazon="198.251.86.36"
-main_one_uol="191.241.141.172"
-backup_one_uol=""
-main_one_equinix="191.241.141.173"
-backup_one_equinix=""
+main_one_equinix="191.241.141.172"
+backup_one_equinix="158.69.102.44"
+main_one_uol="191.241.141.173"
+backup_one_uol="158.69.21.146"
 
 #curls
 curl_check_one_google=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_google/ -m 20)
@@ -28,5 +28,12 @@ if [ "$curl_check_one_google" != "$curl_result" ]; then
 grep "$main_one_google" $dns_files && sed -r -i -e "s|$main_one_google|$backup_one_google|g" $dns_files && service named reload
 else
 grep "$backup_one_google" $dns_files && sed -r -i -e "s|$backup_one_google|$main_one_google|g" $dns_files && service named reload
+fi
+
+#one-equinix
+if [ "$curl_check_one_equinix" != "$curl_result" ]; then
+grep "$main_one_equinix" $dns_files && sed -r -i -e "s|$main_one_equinix|$backup_one_equinix|g" $dns_files && service named reload
+else
+grep "$backup_one_equinix" $dns_files && sed -r -i -e "s|$backup_one_equinix|$main_one_equinix|g" $dns_files && service named reload
 fi
 #vms - end
