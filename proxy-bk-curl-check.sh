@@ -1,8 +1,8 @@
 #!/bin/bash
 nginx_conf=/etc/nginx/nginx.conf
 nginx_ssl_conf=/etc/nginx/sites-enabled/ssls.conf
-first_curl_check=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://ip-cloud-1/ -m 20)
-second_curl_check=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://ip-cloud-2/ -m 20)
+first_curl_check=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://ip-cloud-1/cgi-sys/defaultwebpage.cgi -m 20)
+second_curl_check=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://ip-cloud-2/cgi-sys/defaultwebpage.cgi -m 20)
 curl_result=200
 main_first_proxy_pass="proxy_pass http://ip-cloud-1;"
 main_ssl_first_proxy_pass="proxy_pass https://ip-cloud-1;"
