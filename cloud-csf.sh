@@ -3,7 +3,7 @@ sed -i 's/TESTING = "1"/TESTING = "0"/g' /etc/csf/csf.conf
 sed -i 's/RESTRICT_SYSLOG = "0"/RESTRICT_SYSLOG = "3"/g' /etc/csf/csf.conf
 sed -i 's/TCP_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995,2221"/TCP_IN = ""/g' /etc/csf/csf.conf
 sed -i 's/TCP_IN = "20,21,22,25,53,80,110,143,443,465,587,993,995,2077,2078,2079,2080,2082,2083,2086,2087,2095,2096,2222"/TCP_IN = ""/g' /etc/csf/csf.conf
-sed -i 's/TCP_OUT = "20,21,22,25,37,53,80,110,113,443,587,993,995"/TCP_OUT = "37,443"/g' /etc/csf/csf.conf
+sed -i 's/TCP_OUT = "20,21,22,25,37,53,80,110,113,443,587,993,995"/TCP_OUT = "37,465,587,443,2525"/g' /etc/csf/csf.conf
 sed -i 's/TCP_OUT = "20,21,22,25,37,43,53,80,110,113,443,587,873,993,995,2086,2087,2089,2703"/TCP_OUT = "37,443"/g' /etc/csf/csf.conf
 sed -i 's/UDP_IN = "20,21,53"/UDP_IN = ""/g' /etc/csf/csf.conf
 sed -i 's/UDP_OUT = "20,21,53,113,123"/UDP_OUT = ""/g' /etc/csf/csf.conf
@@ -39,4 +39,9 @@ sed -i 's/LT_EMAIL_ALERT = "1"/LT_EMAIL_ALERT = "0"/g' /etc/csf/csf.conf
 sed -i 's/RT_RELAY_LIMIT = "100"/RT_RELAY_LIMIT = "400"/g' /etc/csf/csf.conf
 sed -i 's/PT_LIMIT = "60"/PT_LIMIT = "0"/g' /etc/csf/csf.conf
 sed -i 's/AT_ALERT = "2"/AT_ALERT = "0"/g' /etc/csf/csf.conf
-csf -r
+sed -i 's/RT_AUTHRELAY_ALERT = "1"/RT_AUTHRELAY_ALERT = "0"/g' /etc/csf/csf.conf
+sed -i 's/RT_AUTHRELAY_LIMIT = "100"/RT_AUTHRELAY_LIMIT = "10000"/g' /etc/csf/csf.conf
+sed -i 's/RT_LOCALRELAY_ALERT = "1"/RT_LOCALRELAY_ALERT = "0"/g' /etc/csf/csf.conf
+sed -i 's/RT_LOCALRELAY_LIMIT = "100"/RT_LOCALRELAY_LIMIT = "10000"/g' /etc/csf/csf.conf
+sed -i 's/RT_LOCALHOSTRELAY_LIMIT = "100"/RT_LOCALHOSTRELAY_LIMIT = "2"/g' /etc/csf/csf.conf
+csf -r 
