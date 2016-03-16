@@ -28,8 +28,8 @@ _dmarc.%domain%. 86400 IN TXT "v=DMARC1; p=none;"
 
 www IN CNAME %domain%.
 
-sftp 90 IN A 191.241.141.170
-ssh 90 IN A 191.241.141.170
+sftp 86400 IN CNAME %domain%.
+ssh 86400 IN CNAME %domain%.
 cpanel 90 IN A 191.241.141.170
 webmail 90 IN A 191.241.141.170
 webmail.webmail 90 IN A 191.241.141.170
