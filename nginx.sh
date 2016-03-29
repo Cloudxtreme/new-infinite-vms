@@ -1,7 +1,10 @@
 # Dependencies
-yum -y install gcc-c++ pcre-devel pcre-devel zlib-devel make unzip openssl-devel
+rpm --import https://linux.web.cern.ch/linux/scientific6/docs/repository/cern/slc6X/i386/RPM-GPG-KEY-cern
+wget -O /etc/yum.repos.d/slc6-devtoolset.repo https://linux.web.cern.ch/linux/scientific6/docs/repository/cern/devtoolset/slc6-devtoolset.repo
+yum -y install gcc-c++ pcre-devel pcre-devel zlib-devel make unzip openssl-devel devtoolset-2-gcc-c++ devtoolset-2-binutils
 nginxVersion="1.8.1"
 NPS_VERSION="1.10.33.7"
+PS_NGX_EXTRA_FLAGS="--with-cc=/opt/rh/devtoolset-2/root/usr/bin/gcc"
 
 # PageSpeed
 mkdir -p /opt/nginx/modules
@@ -16,7 +19,7 @@ mkdir -p /src
 wget http://nginx.org/download/nginx-$nginxVersion.tar.gz -O /src/nginx-$nginxVersion.tar.gz
 tar -xzf /src/nginx-$nginxVersion.tar.gz
 mv /src/nginx-$nginxVersion /src/nginx
-cd /src/nginx && ./configure --add-module=/opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta \
+cd /src/nginx && ./configure --add-module=/opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta  ${PS_NGX_EXTRA_FLAGS} \
 --prefix=/usr/local/nginx \
 --sbin-path=/usr/local/sbin/nginx \
 --conf-path=/etc/nginx/nginx.conf \
