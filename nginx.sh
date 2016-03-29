@@ -7,10 +7,9 @@ NPS_VERSION="1.10.33.7"
 cd /
 mkdir -p /src
 wget http://nginx.org/download/nginx-$nginxVersion.tar.gz -O /src/nginx-$nginxVersion.tar.gz
-tar -xzf /src/nginx-$nginxVersion.tar.gz 
-ln -sf /src/nginx-$nginxVersion /src/nginx
-cd /src/nginx
-./configure --add-module=/opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta \
+tar -xzf /src/nginx-$nginxVersion.tar.gz
+mv /src/nginx-$nginxVersion /src/nginx
+cd /src/nginx && ./configure --add-module=/opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta \
 --prefix=/usr/local/nginx \
 --sbin-path=/usr/local/sbin/nginx \
 --conf-path=/etc/nginx/nginx.conf \
@@ -24,7 +23,7 @@ cd /src/nginx
 --with-http_gzip_static_module \
 --with-http_auth_request_module \
 --with-file-aio \
---with-http_v2_module \
+--with-http_spdy_module \
 --with-http_limit_req_module \
 --with-http_limit_zone_module \
 --with-http_headers \
