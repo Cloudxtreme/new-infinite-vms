@@ -56,6 +56,7 @@ mv /root/infinite-scripts/nginx.conf /etc/nginx/nginx.conf
 mv /root/infinite-scripts/ssl.conf /etc/nginx/ssl.conf
 mv /root/infinite-scripts/pagespeed.conf /etc/nginx/pagespeed.conf
 mv /root/infinite-scripts/expires.conf /etc/nginx/expires.conf
+mv /root/infinite-scripts/error_pages.conf /etc/nginx/error_pages.conf
 mv /root/infinite-scripts/maintenance.html /etc/nginx/maintenance.html
 mv /root/infinite-scripts/forbidden.html /etc/nginx/forbidden.html
 mv /root/infinite-scripts/proxy-index.html /etc/nginx/proxy-index.html
