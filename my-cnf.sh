@@ -13,5 +13,5 @@ echo -e "skip-name-resolve" >> /etc/my.cnf
 echo -e "expire_logs_days=3" >> /etc/my.cnf
 echo -e "slow_query_log=1" >> /etc/my.cnf
 echo -e "slow_query_log_file=/var/lib/mysql/slow.log" >> /etc/my.cnf
-echo -e "character-set-server=utf8mb4" >> /etc/my.cnf
-echo -e "collation-server=utf8mb4_unicode_ci" >> /etc/my.cnf
+echo -e "character_set_server=utf8mb4" >> /etc/my.cnf
+echo -e "collation_server=utf8mb4_unicode_ci" >> /etc/my.cnf
