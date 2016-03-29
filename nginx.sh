@@ -49,7 +49,7 @@ wget -O /etc/init.d/nginx https://gist.github.com/sairam/5892520/raw/b8195a71e94
 chmod +x /etc/init.d/nginx
 chkconfig --add nginx
 chkconfig --level 345 nginx on
-sed -i "s|sbin|local/sbin|g" /etc/init.d/nginx
+ln -s /usr/local/sbin/nginx /usr/sbin/nginx
 
 # Configurations Files
 mv /root/infinite-scripts/nginx.conf /etc/nginx/nginx.conf
