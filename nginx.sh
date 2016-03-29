@@ -3,6 +3,13 @@ yum -y install gcc-c++ pcre-devel pcre-devel zlib-devel make unzip openssl-devel
 nginxVersion="1.8.1"
 NPS_VERSION="1.10.33.7"
 
+# PageSpeed
+mkdir -p /opt/nginx/modules
+wget https://github.com/pagespeed/ngx_pagespeed/archive/release-${NPS_VERSION}-beta.zip -O /opt/nginx/modules/release-${NPS_VERSION}-beta.zip
+unzip /opt/nginx/modules/release-${NPS_VERSION}-beta.zip
+wget https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz -O /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
+tar /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
+
 # NGINX
 cd /
 mkdir -p /src
@@ -39,13 +46,6 @@ wget -O /etc/init.d/nginx https://gist.github.com/sairam/5892520/raw/b8195a71e94
 chmod +x /etc/init.d/nginx
 chkconfig --add nginx
 chkconfig --level 345 nginx on
-
-# PageSpeed
-mkdir -p /opt/nginx/modules
-wget https://github.com/pagespeed/ngx_pagespeed/archive/release-${NPS_VERSION}-beta.zip -O /opt/nginx/modules/release-${NPS_VERSION}-beta.zip
-unzip /opt/nginx/modules/release-${NPS_VERSION}-beta.zip
-wget https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz -O /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
-tar /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
 
 # Configurations Files
 mv /root/infinite-scripts/nginx.conf /etc/nginx/nginx.conf
