@@ -1,7 +1,7 @@
 # Dependencies
 yum -y install gcc-c++ pcre-devel pcre-devel zlib-devel make unzip openssl-devel
 nginxVersion="1.8.1"
-NPS_VERSION=1.10.33.7
+NPS_VERSION="1.10.33.7"
 
 # NGINX
 cd /
@@ -53,6 +53,7 @@ wget https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz -O /opt/ngin
 tar /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
 
 # Configurations Files
+mv /root/infinite-scripts/nginx.conf /etc/nginx/nginx.conf
 mv /root/infinite-scripts/ssl.conf /etc/nginx/ssl.conf
 mv /root/infinite-scripts/pagespeed.conf /etc/nginx/pagespeed.conf
 mv /root/infinite-scripts/expires.conf /etc/nginx/expires.conf
