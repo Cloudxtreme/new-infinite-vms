@@ -16,7 +16,7 @@ wget https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz -O /opt/ngin
 tar -xzf /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
 
 # NGINX
-rm -rf /src/nginx
+rm -rf /src/nginx*
 cd /
 mkdir -p /src
 wget http://nginx.org/download/nginx-$nginxVersion.tar.gz -O /src/nginx-$nginxVersion.tar.gz
