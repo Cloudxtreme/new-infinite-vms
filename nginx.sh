@@ -11,7 +11,7 @@ PS_NGX_EXTRA_FLAGS="--with-cc=/opt/rh/devtoolset-2/root/usr/bin/gcc"
 rm -rf /opt/nginx
 mkdir -p /opt/nginx/modules
 wget https://github.com/pagespeed/ngx_pagespeed/archive/release-${NPS_VERSION}-beta.zip -O /opt/nginx/modules/release-${NPS_VERSION}-beta.zip
-unzip /opt/nginx/modules/release-${NPS_VERSION}-beta.zip
+unzip /opt/nginx/modules/release-${NPS_VERSION}-beta.zip -d /opt/nginx/modules/
 wget https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz -O /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
 tar -xzf /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
 
@@ -20,7 +20,7 @@ rm -rf /src/nginx
 cd /
 mkdir -p /src
 wget http://nginx.org/download/nginx-$nginxVersion.tar.gz -O /src/nginx-$nginxVersion.tar.gz
-tar -xzf /src/nginx-$nginxVersion.tar.gz
+tar -xzf /src/nginx-$nginxVersion.tar.gz -C /src/
 mv /src/nginx-$nginxVersion /src/nginx
 cd /src/nginx && ./configure --add-module=/opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta  ${PS_NGX_EXTRA_FLAGS} \
 --prefix=/usr/local/nginx \
