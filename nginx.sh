@@ -13,7 +13,7 @@ mkdir -p /opt/nginx/modules
 wget https://github.com/pagespeed/ngx_pagespeed/archive/release-${NPS_VERSION}-beta.zip -O /opt/nginx/modules/release-${NPS_VERSION}-beta.zip
 unzip /opt/nginx/modules/release-${NPS_VERSION}-beta.zip -d /opt/nginx/modules/
 wget https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz -O /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
-tar -xzf /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz
+tar -xzf /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/${NPS_VERSION}.tar.gz -C /opt/nginx/modules/ngx_pagespeed-release-${NPS_VERSION}-beta/
 
 # NGINX
 rm -rf /src/nginx*
