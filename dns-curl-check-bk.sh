@@ -14,10 +14,10 @@ backup_one_equinix="158.69.102.44"
 #curls
 first_curl_one_google=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_google/cgi-sys/defaultwebpage.cgi -m 30)
 second_curl_one_google=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_google/ -m 20)
-ssl_curl_one_google=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' https://$main_one_google/ -m 10)
+ssl_curl_one_google=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' https://$main_one_google/ -m 10 -k)
 first_curl_one_equinix=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_equinix/cgi-sys/defaultwebpage.cgi -m 30)
 second_curl_one_equinix=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' http://$main_one_equinix/ -m 20)
-ssl_curl_one_equinix=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' https://$main_one_equinix/ -m 10)
+ssl_curl_one_equinix=$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' https://$main_one_equinix/ -m 10 -k)
 curl_result=200
 ssl_curl_result=301
 #variables - end
