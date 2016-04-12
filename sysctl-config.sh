@@ -12,7 +12,6 @@ echo "net.ipv4.conf.all.send_redirects= 0" >> /etc/sysctl.conf
 echo "net.ipv4.conf.default.send_redirects= 0" >> /etc/sysctl.conf
 echo "net.ipv4.conf.default.accept_redirects= 0" >> /etc/sysctl.conf
 echo "net.ipv4.conf.default.secure_redirects= 0" >> /etc/sysctl.conf
-echo "net.ipv4.ip_local_port_range = 1024 65000" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_fin_timeout = 20" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_tw_recycle= 0" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_tw_reuse= 1" >> /etc/sysctl.conf
