@@ -5,9 +5,9 @@
 dns_files=/var/named/*.db
 
 #proxys ips
-main_one_google="191.241.141.170"
-backup_one_google="198.251.81.97"
-main_one_amazon="191.241.141.171"
+main_one_google="198.251.86.35"
+backup_one_google="158.69.21.163"
+main_one_amazon="198.251.86.36"
 backup_one_amazon="198.251.81.98"
 main_one_equinix="191.241.141.172"
 backup_one_equinix="158.69.102.44"
