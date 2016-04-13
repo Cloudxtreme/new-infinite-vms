@@ -25,11 +25,11 @@ ssl_curl_result=301
 #vms - start
 #one-google
 if [ "$first_curl_one_google" != "$curl_result" ] && [ "$second_curl_one_google" != "$curl_result" ] && [ "$ssl_curl_one_google" != "$ssl_curl_result" ]; then
-grep "$anycast_one_google" $dns_files && perl -pi -e "s|$anycast_one_google|$backup_one_google|g" $dns_files && service named reload && sh /root/infinite-scripts/dns-serial-fix.sh
+grep "$anycast_one_google" $dns_files && perl -pi -e "s|$anycast_one_google|$backup_one_google|g" $dns_files && sh /root/infinite-scripts/dns-serial-fix.sh && service named reload
 fi
 
 #one-equinix
 if [ "$first_curl_one_equinix" != "$curl_result" ] && [ "$second_curl_one_equinix" != "$curl_result" ] && [ "$ssl_curl_one_equinix" != "$ssl_curl_result" ]; then
-grep "$main_one_equinix" $dns_files && perl -pi -e "s|$main_one_equinix|$backup_one_equinix|g" $dns_files && service named reload && sh /root/infinite-scripts/dns-serial-fix.sh
+grep "$main_one_equinix" $dns_files && perl -pi -e "s|$main_one_equinix|$backup_one_equinix|g" $dns_files && sh /root/infinite-scripts/dns-serial-fix.sh && service named reload
 fi
 #vms - end
