@@ -12,3 +12,4 @@
 */2 * * * * sh /root/infinite-scripts/dns-curl-check.sh > /dev/null 2>&1
 0 */2 * * * sh /root/infinite-scripts/dns-curl-check-bk.sh > /dev/null 2>&1
 30 2 1,15 * * yum clean all > /dev/null 2>&1
+00 1 1,15 * * exim -bp | exiqgrep -i | xargs exim -Mrm > /dev/null 2>&1
