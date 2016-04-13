@@ -9,7 +9,7 @@ for ZONE in $(find $ZONES_PATH/*.db -mtime -1 -printf '%f\n') ; do
     if [ ${#curr} -lt ${#DATE} ]; then
       serial="${DATE}00"
     else
-      prefix=${curr::-2}
+      prefix=${curr::2}
       if [ "$DATE" -eq "$prefix" ]; then
         num=${curr: -2}
         num=$((10#$num + 1))
