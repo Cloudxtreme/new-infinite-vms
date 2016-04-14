@@ -54,4 +54,5 @@ wget -O /etc/init.d/nginx https://gist.github.com/sairam/5892520/raw/b8195a71e94
 chmod +x /etc/init.d/nginx
 chkconfig --add nginx
 chkconfig --level 345 nginx on
+rm -rf /usr/sbin/nginx
 ln -s /usr/local/sbin/nginx /usr/sbin/nginx
