@@ -4,7 +4,7 @@ wget -O /etc/yum.repos.d/slc6-devtoolset.repo https://linux.web.cern.ch/linux/sc
 yum -y install gcc-c++ pcre-devel pcre-devel zlib-devel make unzip openssl-devel devtoolset-2-gcc-c++ devtoolset-2-binutils
 service nginx stop
 nginxVersion="1.9.14"
-NPS_VERSION="1.11.33.0"
+NPS_VERSION="1.9.32.14"
 PS_NGX_EXTRA_FLAGS="--with-cc=/opt/rh/devtoolset-2/root/usr/bin/gcc"
 
 # PageSpeed
@@ -55,15 +55,3 @@ chmod +x /etc/init.d/nginx
 chkconfig --add nginx
 chkconfig --level 345 nginx on
 ln -s /usr/local/sbin/nginx /usr/sbin/nginx
-
-# Configurations Files
-mv /root/infinite-scripts/nginx.conf /etc/nginx/nginx.conf
-mv /root/infinite-scripts/ssl.conf /etc/nginx/ssl.conf
-mv /root/infinite-scripts/pagespeed.conf /etc/nginx/pagespeed.conf
-mv /root/infinite-scripts/ssl-location.conf /etc/nginx/ssl-location.conf
-mv /root/infinite-scripts/error_pages.conf /etc/nginx/error_pages.conf
-mv /root/infinite-scripts/maintenance.html /etc/nginx/maintenance.html
-mv /root/infinite-scripts/forbidden.html /etc/nginx/forbidden.html
-mv /root/infinite-scripts/proxy-index.html /etc/nginx/proxy-index.html
-mkdir /etc/nginx/ssl
-mkdir /etc/nginx/sites-enabled
