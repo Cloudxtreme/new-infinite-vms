@@ -4,7 +4,7 @@ wget -O /etc/yum.repos.d/slc6-devtoolset.repo https://linux.web.cern.ch/linux/sc
 yum -y install gcc-c++ pcre-devel pcre-devel zlib-devel make unzip openssl-devel devtoolset-2-gcc-c++ devtoolset-2-binutils
 service nginx stop
 nginxVersion="1.9.14"
-NPS_VERSION="1.9.32.14"
+NPS_VERSION="1.10.33.7"
 PS_NGX_EXTRA_FLAGS="--with-cc=/opt/rh/devtoolset-2/root/usr/bin/gcc"
 
 # PageSpeed
