@@ -49,7 +49,6 @@ cd /src/nginx && ./configure --add-module=/opt/nginx/modules/ngx_pagespeed-relea
 --user=nginx \
 --group=nginx
 cd /src/nginx && make && make install
-useradd nginx --system --no-create-home --group nginx || true
 wget -O /etc/init.d/nginx https://gist.github.com/sairam/5892520/raw/b8195a71e944d46271c8a49f2717f70bcd04bf1a/etc-init.d-nginx
 chmod +x /etc/init.d/nginx
 chkconfig --add nginx
