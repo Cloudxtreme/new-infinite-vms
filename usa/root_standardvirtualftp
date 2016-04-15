@@ -3,10 +3,10 @@
 $TTL %ttl%
 @      %nsttl%	IN      SOA     %nameserver%. abuse.infinite.sx. (
 		%serial%	; serial, todays date+todays
-		7200		; refresh, seconds
+		3600		; refresh, seconds
 		900		; retry, seconds
-		1209600		; expire, seconds
-		86400 )		; minimum, seconds
+		604800		; expire, seconds
+		90 )		; minimum, seconds
 
 %domain%. %nsttl% IN NS %nameserver%.
 %domain%. %nsttl% IN NS %nameserver2%.
@@ -18,22 +18,22 @@ $TTL %ttl%
 %nameserverentry3%. IN A %nameservera3%
 %nameserverentry4%. IN A %nameservera4%
 
-%domain%. 90 IN A 191.241.141.170
+%domain%. 90 IN A ip-proxy
 
 %domain%. 28800 IN MX 1 mx.one.emailserver8.com.
 %domain%. 28800 IN MX 5 mx2.one.emailserver8.com.
 %domain%. 28800 IN MX 10 mx3.one.emailserver8.com.
-%domain%. 28800 IN TXT "v=spf1 include:_spf.one.emailserver8.com ~all"
+%domain%. 28800 IN TXT "v=spf1 include:_spf.one.emailserver8.com include:sendgrid.net ~all"
 _dmarc.%domain%. 86400 IN TXT "v=DMARC1; p=none;"
 
 www 86400 IN CNAME %domain%.
 
 sftp 86400 IN CNAME %domain%.
 ssh 86400 IN CNAME %domain%.
-cpanel 90 IN A 191.241.141.170
-webmail 90 IN A 191.241.141.170
-webmail.webmail 90 IN A 191.241.141.170
-cpanel.webmail 90 IN A 191.241.141.170
+cpanel 90 IN A ip-proxy
+webmail 90 IN A ip-proxy
+webmail.webmail 90 IN A ip-proxy
+cpanel.webmail 90 IN A ip-proxy
 
 autoconfig 86400 IN A 104.206.223.171
 autodiscover 86400 IN A 104.206.223.171
