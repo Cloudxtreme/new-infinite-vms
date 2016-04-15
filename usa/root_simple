@@ -3,10 +3,10 @@
 $TTL %ttl%
 @      %nsttl%	IN      SOA     %nameserver%. abuse.infinite.sx. (
 		%serial%	; serial, todays date+todays
-		7200		; refresh, seconds
+		3600		; refresh, seconds
 		900		; retry, seconds
-		1209600		; expire, seconds
-		86400 )		; minimum, seconds
+		604800		; expire, seconds
+		90 )		; minimum, seconds
 
 %domain%. %nsttl%	IN NS %nameserver%.
 %domain%. %nsttl%	IN NS %nameserver2%.
@@ -18,5 +18,5 @@ $TTL %ttl%
 %nameserverentry3%. IN A %nameservera3%
 %nameserverentry4%. IN A %nameservera4%
 
-%domain%. 90 IN A 191.241.141.170
+%domain%. 90 IN A ip-proxy
 www IN CNAME %domain%.
