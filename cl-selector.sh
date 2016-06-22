@@ -13,4 +13,8 @@ echo -e "\n" | tee -a /etc/cl.selector/php.conf
 echo "Directive = expose_php" | tee -a /etc/cl.selector/php.conf
 echo "Default   = Off" | tee -a /etc/cl.selector/php.conf
 echo "Type      = bool" | tee -a /etc/cl.selector/php.conf
-echo "Comment   = Prevents the webserver from sending back the X-Powered-By header." | tee -a /etc/cl.selector/php.conf
+echo -e "\n" | tee -a /etc/cl.selector/php.conf
+echo "Directive = output_buffering" | tee -a /etc/cl.selector/php.conf
+echo "Default   = Off" | tee -a /etc/cl.selector/php.conf
+echo "Type      = bool" | tee -a /etc/cl.selector/php.conf
+echo "Comment   = When output buffering is enabled, PHP sends all of the output to the client only after script processing is complete." | tee -a /etc/cl.selector/php.conf
